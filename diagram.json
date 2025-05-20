@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Bryson",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    { "type": "board-nokia-5110", "id": "lcd1", "top": -78.54, "left": -176.58, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 198.2,
+      "left": 86.4,
+      "attrs": { "color": "blue", "xray": "1", "bounce": "1" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:CLK", "uno:3", "green", [ "v-80.77", "h297.6" ] ],
+    [ "lcd1:DIN", "uno:4", "green", [ "v-42.37", "h316.8" ] ],
+    [ "lcd1:DC", "uno:5", "green", [ "v-42.37", "h307.2" ] ],
+    [ "lcd1:CE", "uno:7", "green", [ "v0" ] ],
+    [ "lcd1:RST", "uno:6", "green", [ "v0" ] ],
+    [ "lcd1:VCC", "uno:3.3V", "red", [ "v0" ] ],
+    [ "lcd1:GND", "uno:GND.3", "black", [ "v0" ] ],
+    [ "btn1:1.r", "uno:2", "green", [ "v0" ] ],
+    [ "btn1:2.r", "uno:GND.2", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
